@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Welcome to MobData
 
-You can use the [editor on GitHub](https://github.com/mobdata/mobdata.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+MobData provides a suite of (mostly) JavaScript apps to manage multiple [Apache CouchDB](https://couchdb.apache.org/) nodes. Easily define complex filters so that only the data you want distributed gets distributed. Resolve replication conflicts with the React-based "little-differ" app to edit and push JSON documents. Monitor the status of all of your CouchDB nodes with the MobBoss app.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### MobNode
 
-### Markdown
+[MobNode](https://github.com/mobdata/mobnode) manages the replication filters for an instance of CouchDB. Filters are a feature of CouchDB used to define which data can be sent to remote CouchDB servers. These filters, written in a complex JSON syntax, are difficult to write and CouchDB provides no native view. MobNode has an easy to use language, "MobDsl", so that you can define, review, and apply filters in an intuitive way.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The webapp runs on NodeJs and serves a ReactJs UI. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### MobBoss
 
-- Bulleted
-- List
+The [MobBoss](https://github.com/mobdata/mobboss) webapp is a tool for monitoring your CouchDB servers. The app gives users visual cues as to the network status, CouchDB instance's status, and replication status for each server, all in a single page, with the ability to drill down into each server's details to resolve conflicts. 
 
-1. Numbered
-2. List
+The webapp runs on NodeJs, alongside a [telegraf](https://github.com/influxdata/telegraf) instance, and serves a ReactJs UI.
 
-**Bold** and _Italic_ and `Code` text
+### little-differ
 
-[Link](url) and ![Image](src)
-```
+The [little-differ](https://github.com/mobdata/little-differ) and [little-differ-react](https://github.com/mobdata/little-differ-react) apps help manage the complex 3-way conflicts that occur with CouchDB replication. Displayed in a manner familiar to git users, JSON documents from 2 servers where an automatic merge can't be done, are easily viewed, edited, and applied back to CouchDB.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mobdata/mobdata.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+little=differ is deployed within MobBoss or little=differ-react can be run as a standalone React app.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Contact us at mobdatasolution@gmail.com and we’ll help you get started.
